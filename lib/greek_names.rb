@@ -16,17 +16,19 @@ module GreekNames
   def vocative(string)
     if string[-2..-1].match(/(ας)|(ης)|(ΑΣ)|(ΗΣ)/)
       string.chop
-    elsif string[-2..-1].match(/(ος)|(ΟΣ)/)
-      maleInOS(string) ? string.gsub('ος','ε') : string.chop
+    elsif string[-2..-1].match(/(ος|ός)|(ΟΣ)/)
+      maleInOS(string)
     else
       string
     end
   end
 
 
-
   def maleInOS(string)
-    string.to_s[-4..-1].match(/(αος)|(ιος)|(ρος)|(ίνος)|(λος)|(ΑΟΣ)|(ΙΟΣ)|(ΡΟΣ)|(ΛΟΣ)|(ΙΝΟΣ)/) ? true : false
+    case string.to_s[-4..-1]
+      when /(γος)|(άνος|ανος)|(τος)|(ΓΟΣ)|(ΑΝΟΣ)|(ΓΟΣ)/ then string.chop
+      else string[-2..-1].match(/(ΟΣ)/) ? string.gsub('ΟΣ','Ε') : string.gsub(/(ός|ος)/,'ε')
+    end
   end
 
 end
