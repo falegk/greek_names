@@ -25,6 +25,7 @@ Or install it yourself as:
 ```ruby
 GreekNames.vocative("Αλέξανδρος") # => "Αλέξανδρε"
 GreekNames.vocative("Γιώργος") # => "Γιώργο"
-GreekNames.vocative("Γιώργος") # => "Γιώργο"
-GreekNames.vocative("Γιώργος") # => "Γιώργο"
+GreekNames.vocative("Αντώνης") # => "Αντώνη"
+GreekNames.vocative("Δήμητρα") # => "Δήμητρα"
+GreekNames.vocative("Παππαδόπουλος") # => "Παππαδόπουλε"
 ```

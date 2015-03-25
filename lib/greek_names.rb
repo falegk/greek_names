@@ -26,7 +26,7 @@ module GreekNames
 
 
   def maleInOS(string)
-    string.to_s[-4..-1].match(/(αος)|(ιος)|(ρος)|(ίνος)|(ΑΟΣ)|(ΙΟΣ)|(ΡΟΣ)|(ΙΝΟΣ)/) ? true : false
+    string.to_s[-4..-1].match(/(αος)|(ιος)|(ρος)|(ίνος)|(λος)|(ΑΟΣ)|(ΙΟΣ)|(ΡΟΣ)|(ΛΟΣ)|(ΙΝΟΣ)/) ? true : false
   end
 
 end
