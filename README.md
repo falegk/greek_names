@@ -1,4 +1,5 @@
 # GreekNames
+[![Gem Version](https://badge.fury.io/rb/greek_names.svg)](http://badge.fury.io/rb/greek_names)
 
 A library for correct appearance Greek names as appropriate.
 
